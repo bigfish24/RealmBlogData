@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "RealmSwiftBlogData"
-  s.version      = "0.3"
+  s.version      = "0.4"
   s.summary      = "Blog data culled from Realm.io for use in Realm tutorials."
   s.description  = <<-DESC
 Data culled from Realm's blog. Includes Realm Swift models for use in importing into Realm file.
