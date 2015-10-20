@@ -29,36 +29,36 @@ let emojiArray: [String] = {
     return [String]()
 }()
 
-class BlogObject: Object {
+public class BlogObject: Object {
     // MARK: Properties
-    dynamic var blogId: Int = 0
-    dynamic var title = ""
-    dynamic var urlString = ""
-    dynamic var date = NSDate.distantPast()
-    dynamic var content = ""
-    dynamic var imageURLString = ""
-    dynamic var emoji = ""
+    public dynamic var blogId: Int = 0
+    public dynamic var title = ""
+    public dynamic var urlString = ""
+    public dynamic var date = NSDate.distantPast()
+    public dynamic var content = ""
+    public dynamic var imageURLString = ""
+    public dynamic var emoji = ""
     
     // MARK: Generated Properties
-    var url: NSURL {
+    public var url: NSURL {
         return NSURL(string: self.urlString)!
     }
     
-    var imageURL: NSURL {
+    public var imageURL: NSURL {
         return NSURL(string: self.imageURLString)!
     }
     
     // MARK: Property Attributes
-    override static func primaryKey() -> String? {
+    override public static func primaryKey() -> String? {
         return "blogId"
     }
     
-    override static func ignoredProperties() -> [String] {
+    override public static func ignoredProperties() -> [String] {
         return ["url","imageURL"]
     }
     
     // MARK: Type Functions
-    static func loadBlogData() {
+    public static func loadBlogData() {
         if let jsonFilePath = NSBundle(forClass: BlogObject.self).pathForResource("blog", ofType: "json") {
             if let jsonData = NSData(contentsOfFile: jsonFilePath) {
                 
@@ -117,7 +117,7 @@ class BlogObject: Object {
         }
     }
     
-    static func randomEmoji() -> String {
+    public static func randomEmoji() -> String {
         let randomIndex = Int(arc4random_uniform(UInt32(emojiArray.count)))
         
         return emojiArray[randomIndex]
