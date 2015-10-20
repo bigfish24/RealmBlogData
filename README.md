@@ -23,6 +23,8 @@ pod 'RealmSwiftBlogData'
 #### How To Use
 **Objective-C**
 ```objc
+#import <RealmBlogData/BlogObject.h>
+
 // Call somewhere in your code
 [BlogObject loadBlogData]
 ...
@@ -31,6 +33,8 @@ pod 'RealmSwiftBlogData'
 ```
 **Swift**
 ```swift
+import RealmSwiftBlogData
+
 // Call somewhere in your code
 BlogObject.loadBlogData()
 ...
